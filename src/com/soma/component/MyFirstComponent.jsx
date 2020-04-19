@@ -5,10 +5,10 @@ import React from 'react'
  */
 function MyFirstComponent() {
     return (
-        <React.Fragment>
+        <>
             <h1>Hello, Mahendra</h1>
             <h2>Mahendra loves sonal.</h2>
-        </React.Fragment>
+        </>
     )
 }
 
