@@ -1,29 +1,39 @@
-import React from 'react';
-import book from '../../../content/book.png'
-import './../css/Books.css'
+import React from "react";
+import book from "../../../content/book.png";
+import "./../css/Books.css";
 
 function Books() {
-    return (
-        <>
-            <Book />
-            <Book />
-            <Book />
-        </>
-    )
-};
-
-const Title = () => <h1>My Book</h1>;
+  return (
+    <section className="book-component">
+      <ComponentHeader className="component-header" />
+      <section className="books-store">
+        <Book />
+        <Book />
+        <Book />
+        <Book />
+        <Book />
+        <Book />
+        <Book />
+        <Book />
+      </section>
+    </section>
+  );
+}
+const ComponentHeader = () => <h1>Mahii Book Store</h1>;
+const Title = () => <h3>My Book</h3>;
 const Author = () => <p>by Author</p>;
-const BookImage = () => <img width="200" height="100" src={book} alt="monkey-donkey"/>;
+const BookImage = () => (
+  <img width="200" height="100" src={book} alt="myMook" />
+);
 
 const Book = () => {
-    return (
-        <div className="bookComponent">
-            <BookImage />
-            <Title/>
-            <Author/>
-        </div>
-    )
+  return (
+    <div className="book">
+      <BookImage />
+      <Title />
+      <Author />
+    </div>
+  );
 };
 
 export default Books;

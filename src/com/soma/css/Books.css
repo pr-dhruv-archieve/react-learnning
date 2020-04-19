@@ -1,7 +1,38 @@
-.bookComponent {
-	background-color: royalblue;
-	border-color: red;
-	border-radius: 40px;
+.book-component {
+	background-color: lightgoldenrodyellow;
+	text-align: center;
+}
+
+.component-header {
+	color: red;
+}
+
+.books-store {
+	background-color: khaki;
+	border-radius: 35px;
+	border-color: lightseagreen;
+	border-width: 2px;
+	border-style: solid;
 	width: fit-content;
 	height: fit-content;
+}
+
+.book {
+	margin: 15px;
+	padding: 10px;
+	width: min-content;
+	height: fit-content;
+	background-color:#fff;
+	border-radius: 120px;
+	box-sizing: border-box;
+	align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+	.books-store {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
+		text-align: center;
+	}
 }
