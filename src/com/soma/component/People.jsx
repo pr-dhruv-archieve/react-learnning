@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 /**
  * Props are the parameter (arguments to the components)
  * ex: <a href="" alt="" /> here, 'a' is the tag name, and href and alt is the props.
@@ -10,16 +10,17 @@ import React, { Component } from "react";
  *
  */
 
-const Person = (props) => {
+const Person = ({ children, person: { name, job, age, company } }) => {
+  // const{name, job, age, company} = props.person
 
-  const{name, job, age, company} = props.person
-
-  console.log(props);
+  // console.log(props);
   return (
     <article>
       <h1>{name}</h1>
+      {children}
       <p>{job}</p>
       <p>{age}</p>
+      <p>{company}</p>
       <hr />
     </article>
   );
@@ -37,9 +38,15 @@ function People() {
 
   return (
     <section>
-      <Person person={data[0]} />
-      <Person person={data[1]} />
-      <Person person={data[2]} />
+      <Person person={data[0]}>
+        <p>About Mahii</p>
+      </Person>
+      <Person person={data[1]}>
+        <p>About Sona</p>
+      </Person>
+      <Person person={data[2]}>
+        <p>About Sim</p>
+      </Person>
     </section>
   );
 }
