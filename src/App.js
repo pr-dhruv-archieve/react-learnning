@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Books from './com/soma/component/Books';
+import Persons from './com/soma/component/Persons';
 
 function App() {
   return (
     <div className="App">
-        <Books/>
+        <Persons />
     </div>
   );
 }
