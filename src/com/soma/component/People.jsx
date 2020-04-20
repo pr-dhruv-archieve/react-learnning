@@ -10,14 +10,14 @@ import React from "react";
  *
  */
 
-const Person = ({ children, person: { name, job, age, company } }) => {
-  // const{name, job, age, company} = props.person
+const Person = (props) => {
+  const{name, job, age, company} = props.person
+  console.log(props);
 
-  // console.log(props);
   return (
     <article>
       <h1>{name}</h1>
-      {children}
+      {props.children}
       <p>{job}</p>
       <p>{age}</p>
       <p>{company}</p>
