@@ -11,12 +11,15 @@ import React, { Component } from "react";
  */
 
 const Person = (props) => {
+
+  const{name, job, age, company} = props.person
+
   console.log(props);
   return (
     <article>
-      <h1>{props.person.name}</h1>
-      <p>{props.person.job}</p>
-      <p>{props.person.age}</p>
+      <h1>{name}</h1>
+      <p>{job}</p>
+      <p>{age}</p>
       <hr />
     </article>
   );
