@@ -13,6 +13,7 @@ import React from "react";
 const Person = (props) => {
   const{name, job, age, company} = props.person
   console.log(props);
+  const {children} = props.children;
 
   return (
     <article>
