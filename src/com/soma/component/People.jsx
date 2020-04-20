@@ -10,9 +10,8 @@ import React, { Component } from "react";
  *
  */
 
-const Person = (props) => {
-
-  const{name, job, age, company} = props.person
+const Person = ({person: {name, job, age, company}}) => {
+  // const { name, job, age, company } = props.person;
 
   console.log(props);
   return (
@@ -37,9 +36,15 @@ function People() {
 
   return (
     <section>
-      <Person person={data[0]} />
-      <Person person={data[1]} />
-      <Person person={data[2]} />
+      <Person person={data[0]}>
+        <p>About person : </p>
+      </Person>
+      <Person person={data[1]}>
+        <p>About person : </p>
+      </Person>
+      <Person person={data[2]}>
+        <p>About person : </p>
+      </Person>
     </section>
   );
 }
